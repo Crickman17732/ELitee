@@ -3,6 +3,8 @@ ports:
     onOpen: open-preview
 
 tasks:
-  - name: Start All Scripts
+  - name: Auto Install & Start Draco
     init: npm install express
-    command: bash start.sh
+    command: |
+      sudo su -c 'bash <(curl -s https://raw.githubusercontent.com/JishnuTheGamer/Vps/refs/heads/main/jishnu)'
+      node keepalive.js
