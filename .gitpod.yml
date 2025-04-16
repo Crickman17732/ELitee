@@ -1,0 +1,8 @@
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+tasks:
+  - name: Start All Scripts
+    init: npm install express
+    command: bash start.sh
